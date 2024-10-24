@@ -24,7 +24,7 @@ module.exports = {
   			background: '#1A1613',
   			foreground: 'hsl(var(--foreground))',
   			card: {
-  				DEFAULT: 'hsl(var(--card))',
+  				DEFAULT: 'rgba(0,0,0,0)',
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			popover: {

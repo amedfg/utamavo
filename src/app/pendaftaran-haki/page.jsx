@@ -7,7 +7,7 @@ export default function PendaftaranHAKI() {
   return (
     <main className="w-full">
         <Navbar/>
-        <section id="virtual-office" className="pt-44 px-40 flex gap-24 w-full justify-between">
+        <section id="pendaftaran-haki" className="pt-44 px-40 flex gap-24 w-full justify-between">
             <div className="w-[619px] flex flex-col justify-start items-start">
             <p className="text-secondary font-black text-5xl">Pendaftaran HAKI/ Merek Dagang</p>
             <p className="py-[23px] text-primary font-normal text-xl">Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta Anda.</p>
