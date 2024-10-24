@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-      <footer className="w-full h-48 pt-96 px-32 text-primary flex flex-row justify-between items-start gap-[110px]">
+      <footer className="w-full h-48 py-8 px-32 text-primary flex flex-row justify-between items-start gap-[110px]">
         {/* Logo and Description */}
         <div className="flex flex-col gap-1.5">
           <img className="w-[145px] h-[55px]" src="/img/logo-navbar.png" alt="UVO Logo" />

@@ -18,7 +18,7 @@ module.exports = {
   			},
   			gold: '#EACF7F',
   			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
+  				DEFAULT: '#F5E7A7',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			background: '#1A1613',
