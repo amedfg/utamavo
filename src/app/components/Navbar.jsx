@@ -25,7 +25,7 @@ import { Button } from "@/components/ui/button";
   
 export default function Navbar(){
     let buttonLabel = "Virtual Officer";
-    let isActive = "";
+    let isActive = "hover:text-gold";
 
     const pathname = usePathname();
     // Determine the button label and path based on the pathname
@@ -109,10 +109,10 @@ export default function Navbar(){
                     </NavigationMenuList>
                 </NavigationMenu>
                 <div className="flex flex-row items-center gap-6">
-                    <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base hover:bg-background hover:text-primary hover:border-slate-500">
-                        <Link href={"#"}>Hubungi Kami</Link>
+                    <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base hover:bg-background hover:text-primary hover:border">
+                        <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"}>Hubungi Kami</Link>
                     </Button>
-                    <Button asChild className="px-2.5 py-2 rounded-lg bg-background border border-neutral-500 text-primary text-base hover:text-background hover:bg-gold">
+                    <Button asChild className="px-2.5 py-2 rounded-lg bg-background border text-primary text-base hover:text-background hover:bg-gold">
                         <Link href={"/about"}>Tentang UVO</Link>
                     </Button>
                 </div>

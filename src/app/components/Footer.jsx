@@ -13,14 +13,14 @@ export default function Footer() {
         {/* Layanan Kami */}
         <div className="flex flex-col w-fit whitespace-nowrap">
           <h3 className="text-gold text-base font-bold font-['Inter']">Layanan Kami</h3>
-          <Link href={"/virtual-office"} className="text-primary text-base font-normal">Virtual Office</Link>
-          <Link href={"/pendaftaran-haki"} className="text-primary text-base font-normal">Pendaftaran HAKI</Link>
-          <Link href={"/konsultan-pajak"} className="text-primary text-base font-normal">Konsultan Pajak</Link>
+          <Link href={"/virtual-office"} className="text-primary text-base font-normal hover:underline">Virtual Office</Link>
+          <Link href={"/pendaftaran-haki"} className="text-primary text-base font-normal hover:underline">Pendaftaran HAKI</Link>
+          <Link href={"/konsultan-pajak"} className="text-primary text-base font-normal hover:underline">Konsultan Pajak</Link>
         </div>
         {/* Tentang Kami */}
         <div className="flex flex-col">
           <h3 className="text-gold text-base font-bold whitespace-nowrap font-['Inter']">Tentang Kami</h3>
-          <Link href={"/about"} className="text-primary text-base font-normal">Tentang UVO</Link>
+          <Link href={"/about"} className="text-primary text-base font-normal hover:underline">Tentang UVO</Link>
         </div>
         
         {/* Hubungi Kami */}

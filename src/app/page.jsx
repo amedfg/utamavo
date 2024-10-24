@@ -41,6 +41,85 @@ export default function Home() {
         <h1 className="pb-6 text-secondary text-4xl font-bold">Layanan Kami</h1>
         <CarouselCard/>
       </section>
+      <section id="about" className="p-32">
+        <div className="flex flex-row items-center">
+          <div className="inline-flex items-center gap-2 min-w-[485px] min-h-[429px] relative w-full">
+            <div className="w-[238px] flex flex-col items-start gap-[11px] relative">
+              <img
+                className="self-stretch h-[276px] object-cover relative w-full rounded-lg"
+                alt="Dscf"
+                src="../img/virtual-office/DSCF32611.png"
+              />
+              <img
+                className="relative self-stretch w-full h-[142px] object-cover rounded-lg"
+                alt="Dscf"
+                src="../img/virtual-office/DSCF32641.png"
+              />
+            </div>
+
+            <div className="w-[239px] flex flex-col items-start gap-[11px] relative">
+              <img
+                className="relative self-stretch w-full h-[142px] object-cover rounded-lg"
+                alt="Dscf"
+                src="../img/virtual-office/DSCF32721.png"
+              />
+              <img
+                className="self-stretch h-[276px] object-cover relative w-full rounded-lg"
+                alt="Dscf"
+                src="../img/virtual-office-1.png"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-4xl text-gold font-bold">UVO Selalu Memberikan Pelayanan yang Terbaik</p>
+            <p className="pt-6 text-primary text-xl font-normal">Utama Virtual Office menawarkan layanan sewa kantor virtual dengan harga terjangkau, sebagai solusi alamat domisili hukum bagi bisnis Anda. Kami telah memenuhi syarat PKP dan diakui oleh pemerintah</p>
+            <div className="pt-6">
+              <Button asChild className="px-2.5 py-2 bg-transparent rounded-lg border-2 text-primary text-base hover:bg-gold hover:text-background hover:border-none group">
+                  <Link href={"/about"} className="flex items-center text-lg group-hover:text-background">
+                    Tentang Kami
+                    <svg className="w-5 h-5 fill-primary transition-colors duration-300 group-hover:fill-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z" fill="currentColor"/>
+                      <path d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z" fill="currentColor"/>
+                      <path d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z" fill="currentColor"/>
+                    </svg>
+                  </Link>
+                </Button>
+              </div>
+          </div>
+
+        </div>
+      </section>
+      <section id="hubungi-kami" className="px-32 pb-16">
+        <div className="w-full h-[450px] rounded-xl relative">
+            {/* Background Image */}
+            <div className="w-full h-full bg-left-bottom bg-cover rounded-xl" style={{ backgroundImage: `url(../img/hubungi-kami.png)` }}
+            ></div>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gold rounded-xl"></div>
+            <div className="absolute inset-0 flex items-center ml-14 w-[605px]">
+              <div className="text-white">
+                <div className="text-4xl font-semibold text-gold">
+                  Tertarik dengan Layanan Kami?
+                </div>
+                <div className="pt-6 text-xl text-primary">
+                Hubungi kami untuk informasi lebih lanjut terkait harga dan layanan yang tersedia di Utama Virtual Office.
+                </div>
+                <div className="pt-8">
+                  <Button asChild className="px-2.5 py-2 bg-transparent rounded-lg border-2 text-primary text-base hover:bg-gold hover:text-background hover:border-none group">
+                    <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"} className="flex items-center text-lg group-hover:text-background">
+                      Hubungi Kami
+                      <svg className="w-5 h-5 fill-primary transition-colors duration-300 group-hover:fill-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z" fill="currentColor"/>
+                        <path d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z" fill="currentColor"/>
+                        <path d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z" fill="currentColor"/>
+                      </svg>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
       <Footer/>
     </main>
   );
