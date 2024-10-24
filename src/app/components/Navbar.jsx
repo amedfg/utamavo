@@ -4,22 +4,49 @@ import * as React from "react"
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils"
+import { ChevronDown } from "lucide-react"
+import { usePathname } from 'next/navigation'
 
 import {
     NavigationMenu,
-    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
   } from "@/components/ui/navigation-menu"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
   
+
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
   
 export default function Navbar(){
+    let buttonLabel = "Virtual Officer";
+    let isActive = "";
+
+    const pathname = usePathname();
+    // Determine the button label and path based on the pathname
+    if (pathname === "/virtual-office") {
+        buttonLabel = "Virtual Officer";
+        isActive = "active text-gold underline";
+    } else if (pathname === "/pt-virtual-office") {
+        buttonLabel = "PT + Virtual Officer";
+        isActive = "active text-gold underline";
+    } else if (pathname === "/cv-virtual-office") {
+        buttonLabel = "CV + Virtual Officer";
+        isActive = "active text-gold underline";
+    }
+
+    // Determine the active class for dropdown items
+    const isActive2Virtual = pathname === "/virtual-office" ? "underline" : "";
+    const isActive2PT = pathname === "/pt-virtual-office" ? "underline" : "";
+    const isActive2CV = pathname === "/cv-virtual-office" ? "underline" : "";
+
     return (
-        <nav className="fixed w-full top-0 z-50">
+        <nav className="fixed w-full top-0 z-50 bg-background">
             <div className="py-3 px-32 max-w-full mx-auto flex flex-row justify-between items-center">
                 <div>
                     <Link href="/">
@@ -33,25 +60,54 @@ export default function Navbar(){
                         />
                     </Link>
                 </div>
-                <div className="relative w-[517px]">
-                    <Input className="flex items-center w-full h-8 rounded-lg bg-primary px-4 py-1 pl-10" />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17"
-                        height="16"
-                        viewBox="0 0 17 16"
-                        fill="none"
-                        className="absolute left-3 top-1/2 transform -translate-y-1/2"
-                    >
-                        <path
-                        d="M15.4079 14.9465L10.7393 10.2817M1.40435 6.39671C1.40465 7.11169 1.54577 7.8196 1.81965 8.48004C2.09353 9.14048 2.49482 9.7405 3.00059 10.2459C3.50636 10.7512 4.10672 11.152 4.76738 11.4253C5.42805 11.6987 6.13608 11.8392 6.85105 11.8389C7.56603 11.8386 8.27394 11.6975 8.93438 11.4236C9.59482 11.1497 10.1948 10.7484 10.7002 10.2427C11.2056 9.7369 11.6063 9.13654 11.8797 8.47588C12.153 7.81521 12.2935 7.10718 12.2932 6.3922C12.2929 5.67723 12.1518 4.96932 11.8779 4.30888C11.6041 3.64844 11.2028 3.04842 10.697 2.54306C10.1912 2.03771 9.59088 1.63692 8.93021 1.36359C8.26955 1.09025 7.56152 0.949719 6.84654 0.950016C6.13157 0.950312 5.42365 1.09143 4.76322 1.36531C4.10278 1.63919 3.50275 2.04048 2.9974 2.54625C2.49205 3.05202 2.09126 3.65238 1.81793 4.31304C1.54459 4.97371 1.40406 5.68174 1.40435 6.39671Z"
-                        stroke="#1A1613"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        />
-                    </svg>
-                </div>
+                <NavigationMenu className="py-3 px-32 max-w-full mx-auto flex flex-row justify-center items-center text-primary">
+                    <NavigationMenuList className="flex items-center gap-8">
+                        <NavigationMenuItem>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <Button variant="link" className={`${isActive}`}>{buttonLabel}<ChevronDown/></Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className="bg-gold">
+                                    <DropdownMenuItem variant="link">
+                                        <Button variant="link" className={`text-background ${isActive2Virtual}`}>
+                                            <Link href={"/virtual-office"} legacyBehavior passHref>
+                                                Virtual Office
+                                            </Link>
+                                        </Button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <Button variant="link" className={`text-background ${isActive2PT}`}>
+                                            <Link href={"/pt-virtual-office"} legacyBehavior passHref>
+                                                PT + Virtual Office
+                                            </Link>
+                                        </Button>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <Button variant="link" className={`text-background ${isActive2CV}`}>
+                                            <Link href={"/cv-virtual-office"} legacyBehavior passHref>
+                                                CV + Virtual Office
+                                            </Link>
+                                        </Button>
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <Button variant="link" className={`bg-background text-primary hover:text-gold [&.active]:text-gold [&.active]:underline ${pathname === "/pendaftaran-haki" ? "active" : ""}`}>
+                                <Link href={"/pendaftaran-haki"} legacyBehavior passHref>
+                                    Pendaftaran HAKI
+                                </Link>
+                            </Button>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <Button variant="link" className={`bg-background text-primary hover:text-gold [&.active]:text-gold [&.active]:underline ${pathname === "/konsultan-pajak" ? "active" : ""}`}>
+                                <Link href={"/konsultan-pajak"} legacyBehavior passHref>
+                                    Konsultan Pajak
+                                </Link>
+                            </Button>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu>
                 <div className="flex flex-row items-center gap-6">
                     <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base hover:bg-background hover:text-primary hover:border-slate-500">
                         <Link href={"#"}>Hubungi Kami</Link>
@@ -61,39 +117,7 @@ export default function Navbar(){
                     </Button>
                 </div>
             </div>
-            <NavigationMenu className="py-3 px-32 max-w-full mx-auto flex flex-row justify-center items-center text-primary">
-                <NavigationMenuList className="flex items-center gap-8">
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger className="flex hover:bg-gold">
-                            Virtual Office
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="bg-gold flex justify-center">
-                            <ul className="flex flex-col gap-3 p-6 w-[300px]">
-                                <ListItem href={"/virtual-office"} title="Virtual Office">
-                                </ListItem>
-                                <ListItem href={"/pt-virtual-office"} title="PT + Virtual Office">
-                                </ListItem>
-                                <ListItem href={"/cv-virtual-office"} title="CV + Virtual Office">
-                                </ListItem>
-                            </ul>
-                        </NavigationMenuContent>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <Button className="bg-background text-primary hover:bg-gold hover:text-background">
-                            <Link href={"/pendaftaran-haki"} legacyBehavior passHref>
-                                Pendaftaran HAKI
-                            </Link>
-                        </Button>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <Button className="bg-background text-primary hover:bg-gold hover:text-background">
-                            <Link href={"/konsultan-pajak"} legacyBehavior passHref>
-                                Konsultan Pajak
-                            </Link>
-                        </Button>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
+            
         </nav>
     );
 }
