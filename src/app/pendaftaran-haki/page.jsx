@@ -17,7 +17,7 @@ export default function PendaftaranHAKI() {
                 </Link>
             </Button>
             </div>
-            <img src="../img/virtual-office-1.png" alt="virtual-office" className="w-fit h-[335px] rounded-lg"/>
+            <img src="../img/pendaftaran-haki.png" alt="virtual-office" className="w-fit h-[335px] rounded-lg"/>
         </section>
         <section id="foto-virtual-office" className="pt-8 pb-16 px-40">
             <h1 className="text-xl text-primary font-bold">Layanan kami mencakup:</h1>

@@ -34,7 +34,7 @@ export default function CVVirtualOffice() {
                 </Link>
             </Button>
             </div>
-            <img src="../img/virtual-office-1.png" alt="virtual-office" className="w-fit h-[335px] rounded-lg"/>
+            <img src="../img/konsultan-pajak.png" alt="virtual-office" className="w-fit h-[335px] rounded-lg"/>
         </section>
         
         <Footer/>
