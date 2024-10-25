@@ -12,7 +12,7 @@ export default function PendaftaranHAKI() {
             <p className="text-secondary font-black text-5xl">Pendaftaran HAKI/ Merek Dagang</p>
             <p className="py-[23px] text-primary font-normal text-xl">Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta Anda.</p>
             <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base ">
-                <Link href={"#"} className="text-lg">
+                <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Pendaftaran%20HAKI%20Anda?"} className="text-lg">
                 Konsultasi Sekarang <img src="../icon/ic-wa.svg" alt="icon-wa" className="w-6 h-6 fill-background" />
                 </Link>
             </Button>

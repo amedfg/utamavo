@@ -29,7 +29,7 @@ export default function CVVirtualOffice() {
                 </div>
             </div>
             <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base ">
-                <Link href={"#"} className="text-lg">
+                <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Konsultan%20Pajak%20Anda?"} className="text-lg">
                 Konsultasi Sekarang <img src="../icon/ic-wa.svg" alt="icon-wa" className="w-6 h-6 fill-background" />
                 </Link>
             </Button>
