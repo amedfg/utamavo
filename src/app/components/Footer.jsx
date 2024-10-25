@@ -12,8 +12,7 @@ export default function Footer() {
             alt="UVO Logo"
           />
           <p className="text-[rgb(243,239,230)] text-base font-normal mt-4">
-            Utama Virtual Office yang diakui oleh Pemerintah dan memenuhi syarat
-            PKP. UVO menyediakan layanan Pendirian Badan Usaha (PT) dengan
+            Utama Virtual Office menyediakan layanan Pendirian Badan Usaha (PT) dengan
             lokasi strategis.
           </p>
         </div>
