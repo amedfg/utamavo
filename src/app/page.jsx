@@ -221,7 +221,7 @@ export default function Home() {
           {/* Background Image */}
           <Image
             // Ensure correct path from 'public' directory
-            src="/img/hubungi-kami.png"
+            src="/img/hubungi-kami.jpg"
             alt="Hubungi Kami background"
             className="rounded-xl"
             priority

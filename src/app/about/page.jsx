@@ -8,7 +8,7 @@ export default function About() {
       <Navbar/>
       <section className="px-8 lg:px-32 pt-36 pb-28 w-full">
         <Image
-          src={"/img/jumbotron-about.png"}
+          src={"/img/jumbotron-about.jpg"}
           alt="jumbotron-about"
           width={500}
           height={500}
