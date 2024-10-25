@@ -62,7 +62,7 @@ export default function CarouselCard() {
         {cards.map((card, index)=>
             <CarouselItem key={index} className="basis-1/4">
                 <div className="p-1">
-                <Card>
+                <Card className="bg-transparent">
                     <CardHeader>
                         <img src={`../img/${card.img}`} alt="virtual-office" className="w-full h-[223px] rounded-sm" />
                     </CardHeader>

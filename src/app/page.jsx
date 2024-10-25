@@ -48,12 +48,12 @@ export default function Home() {
               <img
                 className="self-stretch h-[276px] object-cover relative w-full rounded-lg"
                 alt="Dscf"
-                src="../img/virtual-office/DSCF32611.png"
+                src="../img/virtual-office/DSCF32611.jpg"
               />
               <img
                 className="relative self-stretch w-full h-[142px] object-cover rounded-lg"
                 alt="Dscf"
-                src="../img/virtual-office/DSCF32641.png"
+                src="../img/virtual-office/DSCF32641.jpg"
               />
             </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
               <img
                 className="relative self-stretch w-full h-[142px] object-cover rounded-lg"
                 alt="Dscf"
-                src="../img/virtual-office/DSCF32721.png"
+                src="../img/virtual-office/DSCF32721.jpg"
               />
               <img
                 className="self-stretch h-[276px] object-cover relative w-full rounded-lg"

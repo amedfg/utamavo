@@ -9,22 +9,21 @@ module.exports = {
   theme: {
   	extend: {
   		fontFamily: {
-  			roboto: ['Roboto"', "sans-serif"]
+  			roboto: ['"Roboto"', "sans-serif"]
   		},
   		colors: {
   			primary: {
-  				DEFAULT: '#F3EFE6',
+  				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
-  			gold: '#EACF7F',
   			secondary: {
-  				DEFAULT: '#F5E7A7',
+  				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
-  			background: '#1A1613',
+  			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
-  				DEFAULT: 'rgba(0,0,0,0)',
+  				DEFAULT: 'hsl(var(--foreground))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			popover: {
@@ -46,6 +45,7 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+			gold: '#EACF7F',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
@@ -53,6 +53,7 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+			
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

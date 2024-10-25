@@ -46,13 +46,13 @@ export default function VirtualOffice() {
               <img
                 className="relative w-[407px] h-[238px] object-cover rounded-lg"
                 alt="DSCF"
-                src="../img/virtual-office/DSCF32231.png"
+                src="../img/virtual-office/DSCF32231.jpg"
               />
 
               <img
                 className="relative w-[371px] h-[238px] object-cover rounded-lg"
                 alt="DSCF"
-                src="../img/virtual-office/DSCF32381.png"
+                src="../img/virtual-office/DSCF32381.jpg"
               />
             </div>
 
@@ -62,13 +62,13 @@ export default function VirtualOffice() {
                   <img
                     className="relative w-[356px] h-[254px] object-cover rounded-lg"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32731.png"
+                    src="../img/virtual-office/DSCF32731.jpg"
                   />
 
                   <img
                     className="relative w-[168px] h-[254px] object-cover rounded-lg"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32771.png"
+                    src="../img/virtual-office/DSCF32771.jpg"
                   />
                 </div>
 
@@ -76,20 +76,20 @@ export default function VirtualOffice() {
                   <img
                     className="relative w-[152px] h-[219px] object-cover rounded-lg"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32621.png"
+                    src="../img/virtual-office/DSCF32621.jpg"
                   />
 
                   <div className="flex-col w-[372px] items-start gap-3 flex relative">
                     <img
                       className="relative self-stretch w-full h-[104px] object-cover rounded-lg"
                       alt="DSCF"
-                      src="../img/virtual-office/DSCF32331.png"
+                      src="../img/virtual-office/DSCF32331.jpg"
                     />
 
                     <img
                       className="relative self-stretch w-full h-[103px] object-cover rounded-lg"
                       alt="DSCF"
-                      src="../img/virtual-office/DSCF32811.png"
+                      src="../img/virtual-office/DSCF32811.jpg"
                     />
                   </div>
                 </div>
@@ -99,19 +99,19 @@ export default function VirtualOffice() {
                 <img
                   className="relative self-stretch w-full h-[161px] object-cover rounded-lg"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32181.png"
+                  src="../img/virtual-office/DSCF32181.jpg"
                 />
 
                 <img
                   className="relative self-stretch w-full h-[155px] object-cover rounded-lg"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32641.png"
+                  src="../img/virtual-office/DSCF32641.jpg"
                 />
 
                 <img
                   className="relative self-stretch w-full h-[147px] object-cover rounded-lg"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32251.png"
+                  src="../img/virtual-office/DSCF32251.jpg"
                 />
               </div>
             </div>
@@ -121,13 +121,13 @@ export default function VirtualOffice() {
             <img
               className="relative self-stretch w-full h-[504px] object-cover rounded-lg"
               alt="DSCF"
-              src="../img/virtual-office/DSCF32611.png"
+              src="../img/virtual-office/DSCF32611.jpg"
             />
 
             <img
               className="relative self-stretch w-full h-[219px] object-cover rounded-lg"
               alt="DSCF"
-              src="../img/virtual-office/DSCF32841.png"
+              src="../img/virtual-office/DSCF32841.jpg"
             />
           </div>
         </div>
