@@ -31,14 +31,14 @@ export default function Home() {
 
           {/* Overlay content */}
           <div className="absolute inset-0 flex flex-col justify-start">
-            <div className="ml-8 mt-10 text-5xl font-black text-primary lg:ml-14 lg:mt-24">
+            <div className="mx-6 mt-10 text-5xl font-black text-primary lg:ml-14 lg:mt-24">
               Utama Virtual Office
             </div>
-            <div className="ml-8 mt-6 text-xl text-primary lg:ml-14">
+            <div className="mx-6 mt-6 text-xl text-primary lg:ml-14">
               Menyediakan kebutuhan Virtual Office anda dengan harga yang
               terjangkau.
             </div>
-            <div className="ml-8 pt-8 lg:ml-14">
+            <div className="mx-6 pt-8 lg:ml-14">
               <Button
                 asChild
                 className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:bg-primary hover:text-background"
@@ -69,7 +69,7 @@ export default function Home() {
         <h1 className="pb-6 text-4xl font-bold text-secondary">Layanan Kami</h1>
         <CarouselCard />
       </section>
-      <section id="about" className="px-8 py-32 lg:px-32">
+      <section id="about" className="px-8 py-14 lg:px-32">
         <div className="flex flex-row items-center">
           <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 lg:inline-flex">
             <div className="relative flex w-[238px] flex-col items-start gap-[11px]">
@@ -232,18 +232,18 @@ export default function Home() {
               objectPosition: "left bottom",
             }}
           />
-          
+
           {/* Overlay content */}
           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-gold opacity-75"></div>
           <div className="relative z-10">
-            <div className="ml-8 mt-10 text-4xl font-semibold text-gold lg:ml-14 lg:mt-24">
+            <div className="mx-6 mt-10 text-4xl font-semibold text-gold lg:ml-14 lg:mt-24">
               Tertarik dengan Layanan Kami?
             </div>
-            <div className="ml-8 mt-6 text-xl text-background lg:ml-14 lg:text-primary">
+            <div className="mx-6 mt-6 text-xl text-background lg:ml-14 lg:text-primary">
               Hubungi kami untuk informasi lebih lanjut terkait harga dan
               layanan yang tersedia di Utama Virtual Office.
             </div>
-            <div className="ml-8 pt-8 lg:ml-14">
+            <div className="mx-6 pt-8 lg:ml-14">
               <Button
                 asChild
                 className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"

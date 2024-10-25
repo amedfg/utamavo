@@ -1,175 +1,176 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Jumbotron from "./components/Jumbotron";
+import Image from "next/image";
 
 export default function VirtualOffice() {
   return (
     <main className="w-full">
-      <Navbar/>
-      <section id="virtual-office" className="pt-44 px-8 lg:px-32 flex lg:gap-24 w-screen lg:w-full justify-between">
-        <div className="w-[619px] hidden flex-col justify-start items-start lg:flex">
-          <p className="text-secondary font-black text-5xl">Virtual Office</p>
-          <p className="py-[23px] text-primary font-normal text-xl">Kami siap membantu mewujudkan kantor virtual dengan lokasi strategis yang mendukung perkembangan bisnis Anda.</p>
-          <p className="text-primary text-xl font-bold">Keuntungan yang didapatkan:</p>
-          <div className="grid grid-cols-2 gap-x-11 gap-y-6  pt-[23px] pb-8">
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Alamat Domisili Gedung
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Ruang Rapat (Meeting Room)
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              PKP (Pengusaha Kena Pajak)
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Working Space
-            </p>
-          </div>
-          <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base ">
-            <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?"} className="text-lg">
-              Konsultasi Sekarang <img src="../icon/ic-wa.svg" alt="icon-wa" className="w-6 h-6 fill-background" />
-            </Link>
-          </Button>
-        </div>
-        <div className="hidden lg:block">
-          <img src="../img/virtual-office-1.png" alt="virtual-office" className="w-fit h-[335px] rounded-lg"/>
-        </div>
-        <div className="flex w-screen lg:hidden">
-                <div className="w-full h-[450px] rounded-xl flex">
-                    {/* Background Image */}
-                    <div className="w-full h-full bg-gradient-to-r from-black to-gold rounded-xl" style={{ backgroundImage: `url(../img/pt-virtual-office.png)` }} >   
-                        <p className="mt-32 ml-8 text-secondary font-black text-3xl">Virtual Office</p>
-                        <p className="ml-8 py-[23px] text-background font-normal text-lg">Kami siap membantu mewujudkan kantor virtual dengan lokasi strategis yang mendukung perkembangan bisnis Anda.</p>
-                        <Button asChild className="ml-8 px-2.5 py-2 bg-gold rounded-lg text-background text-base ">
-                            <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?"} className="text-lg">
-                            Konsultasi Sekarang <img src="../icon/ic-wa.svg" alt="icon-wa" className="w-6 h-6 fill-background" />
-                            </Link>
-                        </Button>
-                    </div>
-                </div>        
-            </div>
-      </section>
-      <section id="foto-virtual-office" className="pt-8 pb-16 px-8 lg:hidden">
-            <h1 className="text-xl text-primary font-bold">Keuntungan yang didapatkan: </h1>
-            <div className="grid grid-rows-1 gap-x-40 gap-y-6  pt-[23px] pb-8">
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Alamat Domisili Gedung
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Ruang Rapat (Meeting Room)
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              PKP (Pengusaha Kena Pajak)
-            </p>
-            <p className="text-primary text-xl font-normal flex items-center">
-              <img src="../icon/ic-checklist.svg" alt="icon-checklist" className="w-[17px] h-[17px] mr-1.5" />
-              Working Space
-            </p>
+      <Navbar />
+      <Jumbotron />
+      <section id="foto-virtual-office" className="px-8 pb-16 pt-8 lg:hidden">
+        <h1 className="text-xl font-bold text-primary">
+          Keuntungan yang didapatkan:{" "}
+        </h1>
+        <div className="grid grid-rows-1 gap-x-40 gap-y-6 pb-8 pt-[23px]">
+          <p className="flex items-center text-xl font-normal text-primary">
+            <Image
+              src={"/icon/ic-checklist.svg"}
+              alt="icon-checklist"
+              width={17}
+              height={17}
+              className="mr-1.5"
+            />
+            Alamat Domisili Gedung
+          </p>
+          <p className="flex items-center text-xl font-normal text-primary">
+            <Image
+              src={"/icon/ic-checklist.svg"}
+              alt="icon-checklist"
+              width={17}
+              height={17}
+              className="mr-1.5"
+            />
+            Ruang Rapat (Meeting Room)
+          </p>
+          <p className="flex items-center text-xl font-normal text-primary">
+            <Image
+              src={"/icon/ic-checklist.svg"}
+              alt="icon-checklist"
+              width={17}
+              height={17}
+              className="mr-1.5"
+            />
+            PKP (Pengusaha Kena Pajak)
+          </p>
+          <p className="flex items-center text-xl font-normal text-primary">
+            <Image
+              src={"/icon/ic-checklist.svg"}
+              alt="icon-checklist"
+              width={17}
+              height={17}
+              className="mr-1.5"
+            />
+            Working Space
+          </p>
         </div>
       </section>
-      <section id="foto-virtual-office" className="hidden lg:block py-16 px-32">
-        <h1 className="text-4xl text-secondary font-bold pb-8">Foto Virtual Office</h1>
-        <div className="flex justify-center items-center gap-3 relative w-full min-w-[1176px] min-h-[735px]">
-          <div className="flex-col w-[790px] items-start gap-3 flex relative">
-            <div className="items-center gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
-              <img
-                className="relative w-[407px] h-[238px] object-cover rounded-lg"
-                alt="DSCF"
-                src="../img/virtual-office/DSCF32231.jpg"
-              />
 
-              <img
-                className="relative w-[371px] h-[238px] object-cover rounded-lg"
+      <section id="foto-virtual-office" className="hidden px-32 py-16 lg:block">
+        <h1 className="pb-8 text-4xl font-bold text-secondary">
+          Foto Virtual Office
+        </h1>
+        <div className="relative flex min-h-[735px] w-full min-w-[1176px] items-center justify-center gap-3">
+          <div className="relative flex w-[790px] flex-col items-start gap-3">
+            <div className="relative flex w-full flex-[0_0_auto] items-center gap-3 self-stretch">
+              <Image
+                className="relative h-[238px] w-[407px] rounded-lg object-cover"
                 alt="DSCF"
-                src="../img/virtual-office/DSCF32381.jpg"
+                src="/img/virtual-office/DSCF32231.jpg"
+                width={407}
+                height={238}
+              />
+              <Image
+                className="relative h-[238px] w-[371px] rounded-lg object-cover"
+                alt="DSCF"
+                src="/img/virtual-office/DSCF32381.jpg"
+                width={371}
+                height={238}
               />
             </div>
 
-            <div className="items-center gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
-              <div className="flex-col w-[536px] items-start gap-3 flex relative">
-                <div className="items-center gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
-                  <img
-                    className="relative w-[356px] h-[254px] object-cover rounded-lg"
+            <div className="relative flex w-full flex-[0_0_auto] items-center gap-3 self-stretch">
+              <div className="relative flex w-[536px] flex-col items-start gap-3">
+                <div className="relative flex w-full flex-[0_0_auto] items-center gap-3 self-stretch">
+                  <Image
+                    className="relative h-[254px] w-[356px] rounded-lg object-cover"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32731.jpg"
+                    src="/img/virtual-office/DSCF32731.jpg"
+                    width={356}
+                    height={254}
                   />
-
-                  <img
-                    className="relative w-[168px] h-[254px] object-cover rounded-lg"
+                  <Image
+                    className="relative h-[254px] w-[168px] rounded-lg object-cover"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32771.jpg"
+                    src="/img/virtual-office/DSCF32771.jpg"
+                    width={168}
+                    height={254}
                   />
                 </div>
 
-                <div className="items-center gap-3 self-stretch w-full flex-[0_0_auto] flex relative">
-                  <img
-                    className="relative w-[152px] h-[219px] object-cover rounded-lg"
+                <div className="relative flex w-full flex-[0_0_auto] items-center gap-3 self-stretch">
+                  <Image
+                    className="relative h-[219px] w-[152px] rounded-lg object-cover"
                     alt="DSCF"
-                    src="../img/virtual-office/DSCF32621.jpg"
+                    src="/img/virtual-office/DSCF32621.jpg"
+                    width={152}
+                    height={219}
                   />
-
-                  <div className="flex-col w-[372px] items-start gap-3 flex relative">
-                    <img
-                      className="relative self-stretch w-full h-[104px] object-cover rounded-lg"
+                  <div className="relative flex w-[372px] flex-col items-start gap-3">
+                    <Image
+                      className="relative h-[104px] w-full self-stretch rounded-lg object-cover"
                       alt="DSCF"
-                      src="../img/virtual-office/DSCF32331.jpg"
+                      src="/img/virtual-office/DSCF32331.jpg"
+                      width={372}
+                      height={104}
                     />
-
-                    <img
-                      className="relative self-stretch w-full h-[103px] object-cover rounded-lg"
+                    <Image
+                      className="relative h-[103px] w-full self-stretch rounded-lg object-cover"
                       alt="DSCF"
-                      src="../img/virtual-office/DSCF32811.jpg"
+                      src="/img/virtual-office/DSCF32811.jpg"
+                      width={372}
+                      height={103}
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="flex-col w-[242px] items-start gap-[11px] flex relative">
-                <img
-                  className="relative self-stretch w-full h-[161px] object-cover rounded-lg"
+              <div className="relative flex w-[242px] flex-col items-start gap-[11px]">
+                <Image
+                  className="relative h-[161px] w-full self-stretch rounded-lg object-cover"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32181.jpg"
+                  src="/img/virtual-office/DSCF32181.jpg"
+                  width={242}
+                  height={161}
                 />
-
-                <img
-                  className="relative self-stretch w-full h-[155px] object-cover rounded-lg"
+                <Image
+                  className="relative h-[155px] w-full self-stretch rounded-lg object-cover"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32641.jpg"
+                  src="/img/virtual-office/DSCF32641.jpg"
+                  width={242}
+                  height={155}
                 />
-
-                <img
-                  className="relative self-stretch w-full h-[147px] object-cover rounded-lg"
+                <Image
+                  className="relative h-[147px] w-full self-stretch rounded-lg object-cover"
                   alt="DSCF"
-                  src="../img/virtual-office/DSCF32251.jpg"
+                  src="/img/virtual-office/DSCF32251.jpg"
+                  width={242}
+                  height={147}
                 />
               </div>
             </div>
           </div>
 
-          <div className="flex-col w-[374px] items-start gap-3 flex relative">
-            <img
-              className="relative self-stretch w-full h-[504px] object-cover rounded-lg"
+          <div className="relative flex w-[374px] flex-col items-start gap-3">
+            <Image
+              className="relative h-[504px] w-full self-stretch rounded-lg object-cover"
               alt="DSCF"
-              src="../img/virtual-office/DSCF32611.jpg"
+              src="/img/virtual-office/DSCF32611.jpg"
+              width={374}
+              height={504}
             />
-
-            <img
-              className="relative self-stretch w-full h-[219px] object-cover rounded-lg"
+            <Image
+              className="relative h-[219px] w-full self-stretch rounded-lg object-cover"
               alt="DSCF"
-              src="../img/virtual-office/DSCF32841.jpg"
+              src="/img/virtual-office/DSCF32841.jpg"
+              width={374}
+              height={219}
             />
           </div>
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </main>
   );
 }
