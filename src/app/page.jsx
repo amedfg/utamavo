@@ -7,7 +7,7 @@ import CarouselCard from "./components/Carousel";
 
 export default function Home() {
   const jumbotron = "/img/jumbotron-home.jpg";
-  const layanan = "../img/virtual-office/DSCF32721.jpg";
+  const layanan = "/img/virtual-office/DSCF32721.jpg";
 
   return (
     <main className="w-full">
@@ -19,10 +19,14 @@ export default function Home() {
           <Image
             src={jumbotron}
             alt="Jumbotron Background"
-            layout="fill"
-            objectFit="cover"
             className="rounded-xl"
             priority={true}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              maxWidth: "100%",
+            }}
           />
 
           {/* Overlay content */}
@@ -76,6 +80,9 @@ export default function Home() {
                 alt="virtual-office"
                 priority={true}
                 className="relative h-[276px] w-full self-stretch rounded-lg object-cover"
+                style={{
+                  maxWidth: "100%",
+                }}
               />
               <Image
                 src={"/img/virtual-office/DSCF32641.jpg"}
@@ -84,6 +91,9 @@ export default function Home() {
                 alt="virtual-office"
                 priority={true}
                 className="relative h-[142px] w-full self-stretch rounded-lg object-cover"
+                style={{
+                  maxWidth: "auto",
+                }}
               />
             </div>
             <div className="relative flex w-[239px] flex-col items-start gap-[11px]">
@@ -94,6 +104,9 @@ export default function Home() {
                 alt="virtual-office"
                 priority={true}
                 className="relative h-[142px] w-full self-stretch rounded-lg object-cover"
+                style={{
+                  maxWidth: "100%",
+                }}
               />
               <Image
                 src={"/img/virtual-office-1.jpg"}
@@ -102,12 +115,15 @@ export default function Home() {
                 alt="virtual-office"
                 priority={true}
                 className="relative h-[276px] w-full self-stretch rounded-lg object-cover"
+                style={{
+                  maxWidth: "100%",
+                }}
               />
             </div>
           </div>
           <div className="hidden h-[450px] w-screen rounded-xl lg:flex">
-            <div className="flex flex-col item">
-              <p className="text-3xl font-bold text-gold mt-10">
+            <div className="item flex flex-col">
+              <p className="mt-32 text-3xl font-bold text-gold">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
               </p>
               <p className="pt-6 text-xl font-normal text-primary">
@@ -149,65 +165,77 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex h-[430px] w-screen rounded-xl lg:hidden">
+          <div className="relative flex h-[450px] w-screen overflow-hidden rounded-xl lg:hidden">
             {/* Background Image */}
-            <div
-              className="h-full w-full rounded-xl bg-gradient-to-r from-background to-gold bg-cover"
-              style={{ backgroundImage: `url(${layanan})` }}
-            >
-              <div className="flex flex-col">
-                <p className="ml-4 mt-10 text-3xl font-bold text-gold">
-                  UVO Selalu Memberikan Pelayanan yang Terbaik
-                </p>
-                <p className="ml-4 mt-6 pt-6 text-xl font-normal text-primary">
-                  Utama Virtual Office menawarkan layanan sewa kantor virtual
-                  dengan harga terjangkau, sebagai solusi alamat domisili hukum
-                  bagi bisnis Anda.
-                </p>
-                <div className="ml-4 pt-6">
-                  <Button
-                    asChild
-                    className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
+            <Image
+              src={layanan}
+              alt="Background for layanan"
+              className="rounded-xl"
+              priority
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+            {/* Overlay and content */}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-background to-gold opacity-75"></div>
+            <div className="absolute inset-0 flex flex-col">
+              <p className="ml-4 mt-10 text-3xl font-bold text-gold">
+                UVO Selalu Memberikan Pelayanan yang Terbaik
+              </p>
+              <p className="ml-4 mt-6 pt-6 text-xl font-normal text-primary">
+                Utama Virtual Office menawarkan layanan sewa kantor virtual
+                dengan harga terjangkau, sebagai solusi alamat domisili hukum
+                bagi bisnis Anda.
+              </p>
+              <div className="ml-4 pt-6">
+                <Button
+                  asChild
+                  className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
+                >
+                  <Link
+                    href="/about"
+                    className="flex items-center text-lg group-hover:text-background"
                   >
-                    <Link
-                      href={"/about"}
-                      className="flex items-center text-lg group-hover:text-background"
+                    Tentang Kami
+                    <svg
+                      className="h-5 w-5 fill-primary transition-colors duration-300 group-hover:fill-background"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
                     >
-                      Tentang Kami
-                      <svg
-                        className="h-5 w-5 fill-primary transition-colors duration-300 group-hover:fill-background"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </Link>
-                  </Button>
-                </div>
+                      <path d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z" />
+                      <path d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z" />
+                      <path d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z" />
+                    </svg>
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id="hubungi-kami" className="flex w-screen px-8 pb-16 lg:px-32">
-        <div className="flex h-[450px] w-screen rounded-xl">
+        <div className="relative flex h-[450px] w-screen overflow-hidden rounded-xl">
           {/* Background Image */}
-          <div
-            className="h-full w-full rounded-xl bg-cover bg-left-bottom"
-            style={{ backgroundImage: `url(../img/hubungi-kami.png)` }}
-          >
+          <Image
+            // Ensure correct path from 'public' directory
+            src="/img/hubungi-kami.png"
+            alt="Hubungi Kami background"
+            className="rounded-xl"
+            priority
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "left bottom",
+            }}
+          />
+          
+          {/* Overlay content */}
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-gold opacity-75"></div>
+          <div className="relative z-10">
             <div className="ml-8 mt-10 text-4xl font-semibold text-gold lg:ml-14 lg:mt-24">
               Tertarik dengan Layanan Kami?
             </div>
@@ -221,9 +249,7 @@ export default function Home() {
                 className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
               >
                 <Link
-                  href={
-                    "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
-                  }
+                  href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
                   className="flex items-center text-lg group-hover:text-background"
                 >
                   Hubungi Kami
@@ -233,18 +259,9 @@ export default function Home() {
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
-                    <path
-                      d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z"
-                      fill="currentColor"
-                    />
+                    <path d="M10 20C4.47059 20 0 15.5294 0 10C0 4.47059 4.47059 0 10 0C15.5294 0 20 4.47059 20 10C20 15.5294 15.5294 20 10 20ZM10 1.17647C5.11765 1.17647 1.17647 5.11765 1.17647 10C1.17647 14.8824 5.11765 18.8235 10 18.8235C14.8824 18.8235 18.8235 14.8824 18.8235 10C18.8235 5.11765 14.8824 1.17647 10 1.17647Z" />
+                    <path d="M12.748 14.462C12.4285 14.426 12.1986 14.1376 12.2347 13.8181L12.9441 7.53562L6.66164 6.82626C6.34206 6.79017 6.11224 6.50185 6.14833 6.18227C6.18441 5.8627 6.47273 5.63288 6.79231 5.66896L12.2447 6.2846C13.3423 6.40853 14.1316 7.39877 14.0076 8.49637L13.392 13.9487C13.3559 14.2683 13.0676 14.4981 12.748 14.462Z" />
+                    <path d="M12.7612 6.92915C13.0152 6.72665 13.3853 6.76844 13.5878 7.02249C13.7903 7.27653 13.7485 7.64663 13.4945 7.84912L6.5947 13.3489C6.34065 13.5514 5.97055 13.5096 5.76806 13.2555C5.56556 13.0015 5.60735 12.6314 5.8614 12.4289L12.7612 6.92915Z" />
                   </svg>
                 </Link>
               </Button>
