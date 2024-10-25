@@ -1,150 +1,221 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils"
-import { ChevronDown } from "lucide-react"
-import { usePathname } from 'next/navigation'
-
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-  } from "@/components/ui/navigation-menu"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-  
+import { usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-  
-export default function Navbar(){
-    let buttonLabel = "Virtual Officer";
-    let isActive = "hover:text-gold";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-    const pathname = usePathname();
-    // Determine the button label and path based on the pathname
-    if (pathname === "/virtual-office") {
-        buttonLabel = "Virtual Officer";
-        isActive = "active text-gold underline";
-    } else if (pathname === "/pt-virtual-office") {
-        buttonLabel = "PT + Virtual Officer";
-        isActive = "active text-gold underline";
-    } else if (pathname === "/cv-virtual-office") {
-        buttonLabel = "CV + Virtual Officer";
-        isActive = "active text-gold underline";
-    }
+export default function Navbar() {
+  const [isMenuOpen, setMenuOpen] = React.useState(false); // State for hamburger toggle
+  const pathname = usePathname();
 
-    // Determine the active class for dropdown items
-    const isActive2Virtual = pathname === "/virtual-office" ? "underline" : "";
-    const isActive2PT = pathname === "/pt-virtual-office" ? "underline" : "";
-    const isActive2CV = pathname === "/cv-virtual-office" ? "underline" : "";
+  // Logic to set button label and active state
+  let buttonLabel = "Virtual Officer";
+  let isActive = "hover:text-gold";
+  if (pathname === "/virtual-office") {
+    buttonLabel = "Virtual Officer";
+    isActive = "active text-gold underline";
+  } else if (pathname === "/pt-virtual-office") {
+    buttonLabel = "PT + Virtual Officer";
+    isActive = "active text-gold underline";
+  } else if (pathname === "/cv-virtual-office") {
+    buttonLabel = "CV + Virtual Officer";
+    isActive = "active text-gold underline";
+  }
 
-    return (
-        <nav className="fixed w-full top-0 z-50 bg-background">
-            <div className="py-3 px-32 max-w-full mx-auto flex flex-row justify-between items-center">
-                <div>
-                    <Link href="/">
-                        <Image 
-                        src="/img/logo-navbar.png"
-                        width={145}
-                        height={55}
-                        alt="logo-navbar"
-                        priority={true} // Keep priority if needed
-                        style={{ width: '145px', height: '55px' }} // Use style for dimensions
-                        />
-                    </Link>
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen); // Toggle mobile menu
+  };
+
+  return (
+    <nav className="fixed w-full top-0 z-50">
+      <div className="py-3 px-32 max-w-full mx-auto flex flex-row justify-between items-center">
+        {/* Logo */}
+        <div>
+          <Link href="/">
+            <Image
+              src="/img/logo-navbar.png"
+              width={145}
+              height={55}
+              alt="logo-navbar"
+              priority={true}
+              style={{ width: "145px", height: "55px" }}
+            />
+          </Link>
+        </div>
+
+        {/* Hamburger button for mobile */}
+        <Button
+          variant="link"
+          className="lg:hidden absolute right-6"
+          onClick={toggleMenu}
+        >
+          <div className="block relative">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 18L20 18" stroke="#EACF7F" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M4 12L20 12" stroke="#EACF7F" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M4 6L20 6" stroke="#EACF7F" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </div>
+        </Button>
+
+        {/* Navigation Links */}
+        <div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div
+                className={`${
+                  isMenuOpen ? "block" : "hidden"
+                } lg:flex lg:items-center lg:static lg:bg-transparent absolute py-5 bg-gold shadow-lg rounded-lg top-full right-4 max-w-[250px] w-full lg:max-w-full`}
+              >
+                {/* Virtual Officer Dropdown */}
+                <div className="hidden lg:block">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="link" className={`${isActive}`}>
+                        {buttonLabel}
+                        <ChevronDown />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="bg-gold">
+                      <DropdownMenuItem>
+                        <Link href={"/virtual-office"}>
+                          <Button variant="link" className="text-background">
+                            Virtual Office
+                          </Button>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href={"/pt-virtual-office"}>
+                          <Button variant="link" className="text-background">
+                            PT + Virtual Office
+                          </Button>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href={"/cv-virtual-office"}>
+                          <Button variant="link" className="text-background">
+                            CV + Virtual Office
+                          </Button>
+                        </Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
-                <NavigationMenu className="py-3 px-32 max-w-full mx-auto flex flex-row justify-center items-center text-primary">
-                    <NavigationMenuList className="flex items-center gap-8">
-                        <NavigationMenuItem>
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <Button variant="link" className={`${isActive}`}>{buttonLabel}<ChevronDown/></Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent className="bg-gold">
-                                    <DropdownMenuItem variant="link">
-                                        <Button variant="link" className={`text-background ${isActive2Virtual}`}>
-                                            <Link href={"/virtual-office"} legacyBehavior passHref>
-                                                Virtual Office
-                                            </Link>
-                                        </Button>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <Button variant="link" className={`text-background ${isActive2PT}`}>
-                                            <Link href={"/pt-virtual-office"} legacyBehavior passHref>
-                                                PT + Virtual Office
-                                            </Link>
-                                        </Button>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <Button variant="link" className={`text-background ${isActive2CV}`}>
-                                            <Link href={"/cv-virtual-office"} legacyBehavior passHref>
-                                                CV + Virtual Office
-                                            </Link>
-                                        </Button>
-                                    </DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Button variant="link" className={`bg-background text-primary hover:text-gold [&.active]:text-gold [&.active]:underline ${pathname === "/pendaftaran-haki" ? "active" : ""}`}>
-                                <Link href={"/pendaftaran-haki"} legacyBehavior passHref>
-                                    Pendaftaran HAKI
-                                </Link>
-                            </Button>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Button variant="link" className={`bg-background text-primary hover:text-gold [&.active]:text-gold [&.active]:underline ${pathname === "/konsultan-pajak" ? "active" : ""}`}>
-                                <Link href={"/konsultan-pajak"} legacyBehavior passHref>
-                                    Konsultan Pajak
-                                </Link>
-                            </Button>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-                <div className="flex flex-row items-center gap-6">
-                    <Button asChild className="px-2.5 py-2 bg-gold rounded-lg text-background text-base hover:bg-background hover:text-primary hover:border">
-                        <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"}>Hubungi Kami</Link>
-                    </Button>
-                    <Button asChild className="px-2.5 py-2 rounded-lg bg-background border text-primary text-base hover:text-background hover:bg-gold">
-                        <Link href={"/about"}>Tentang UVO</Link>
-                    </Button>
-                </div>
-            </div>
-            
-        </nav>
-    );
-}
 
-const ListItem = React.forwardRef(
-    ({ className, title, children, ...props }, ref) => {
-      return (
-        <li className="w-full"> {/* Ensure li takes full width */}
-          <NavigationMenuLink asChild>
-            <a
-              ref={ref}
-              className={cn(
-                "block w-full select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                className
-              )}
-              {...props}
-            >
-              <div className="text-sm font-medium leading-none">{title}</div>
-              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                {children}
-              </p>
-            </a>
-          </NavigationMenuLink>
-        </li>
-      );
-    }
+                {/* Other Navigation Links */}
+                <div className={`lg:hidden ${isMenuOpen ? "block" : "hidden"}`}>
+                  <Link href="/virtual-office">
+                    <Button
+                      variant="link"
+                      className={`text-background lg:text-primary ${
+                        pathname === "/virtual-office"
+                          ? "active text-background lg:text-gold underline"
+                          : ""
+                      }`}
+                    >
+                      Virtual Office
+                    </Button>
+                  </Link>
+
+                  <Link href="/pt-virtual-office">
+                    <Button
+                      variant="link"
+                      className={`text-background lg:text-primary ${
+                        pathname === "/pt-virtual-office"
+                          ? "active text-background lg:text-gold underline"
+                          : ""
+                      }`}
+                    >
+                      PT + Virtual Office
+                    </Button>
+                  </Link>
+
+                  <Link href="/cv-virtual-office">
+                    <Button
+                      variant="link"
+                      className={`text-background lg:text-primary ${
+                        pathname === "/cv-virtual-office"
+                          ? "active text-background lg:text-gold underline"
+                          : ""
+                      }`}
+                    >
+                      CV + Virtual Office
+                    </Button>
+                  </Link>
+                </div>
+                <Link href="/pendaftaran-haki">
+                  <Button
+                    variant="link"
+                    className={`text-background lg:text-primary  ${
+                      pathname === "/pendaftaran-haki"
+                        ? "active text-background lg:text-gold underline"
+                        : ""
+                    }`}
+                  >
+                    Pendaftaran HAKI
+                  </Button>
+                </Link>
+
+                <Link href="/konsultan-pajak">
+                  <Button
+                    variant="link"
+                    className={`text-background lg:text-primary ${
+                      pathname === "/konsultan-pajak"
+                        ? "active text-background lg:text-gold underline"
+                        : ""
+                    }`}
+                  >
+                    Konsultan Pajak
+                  </Button>
+                </Link>
+                <div className="block lg:hidden">
+                  <Link href="/about">
+                    <Button
+                      variant="link"
+                      className={`text-background lg:text-primary ${
+                        pathname === "/about"
+                          ? "active text-background lg:text-gold underline"
+                          : ""
+                      }`}
+                    >
+                      Tentang UVO
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </DropdownMenuTrigger>
+          </DropdownMenu>
+        </div>
+
+        {/* Right-side buttons */}
+        <div className="hidden lg:flex lg:flex-row lg:items-center gap-6">
+          <Button
+            asChild
+            className="px-2.5 py-2 bg-gold rounded-lg text-background text-base hover:bg-background hover:text-primary hover:border"
+          >
+            <Link href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?">
+              Hubungi Kami
+            </Link>
+          </Button>
+          <Button
+            asChild
+            className="px-2.5 py-2 rounded-lg bg-background border text-primary text-base hover:text-background hover:bg-gold"
+          >
+            <Link href="/about">Tentang UVO</Link>
+          </Button>
+        </div>
+      </div>
+    </nav>
   );
-  
-  ListItem.displayName = "ListItem";
-  
+}

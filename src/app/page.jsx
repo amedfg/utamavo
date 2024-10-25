@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <Navbar/>
+      {/* <Navbar2/> */}
       <section id="jumbotron" className="px-32 pt-36 w-full relative">
         <div className="w-full h-[450px] rounded-xl relative">
           {/* Background Image */}
