@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -60,16 +60,17 @@ export default function CarouselCard() {
     >
       <CarouselContent>
         {cards.map((card, index)=>
-            <CarouselItem key={index} className="basis-1/4">
+            <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/4">
                 <div className="p-1">
-                <Card className="bg-transparent">
+                <Card className="bg-transparent h-">
                     <CardHeader>
-                        <img src={`../img/${card.img}`} alt="virtual-office" className="w-full h-[223px] rounded-sm" />
+                        <img src={`../img/${card.img}`} alt="virtual-office" className="w-full max-h-[223px] rounded-sm" />
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="h-auto">
                     <p className="text-secondary text-2xl font-semibold">{card.title}</p>
                     <p className="pt-6 text-primary text-base">{card.description}</p>
-                    <div className="flex flex-row justify-between pt-6 pb-2">
+                  
+                    <div className="flex flex-row justify-between align-bottom pt-6 pb-2">
                         <Button asChild className="p-2.5 rounded-md border border-solid bg-transparent text-primary text-base hover:bg-gold hover:text-background group">
                                 <Link href={`${card.pages}`} className="flex items-center text-lg group-hover:text-background">
                                 Detail

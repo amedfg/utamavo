@@ -19,16 +19,16 @@ export default function Navbar() {
   const pathname = usePathname();
 
   // Logic to set button label and active state
-  let buttonLabel = "Virtual Officer";
+  let buttonLabel = "Virtual Office";
   let isActive = "hover:text-gold";
   if (pathname === "/virtual-office") {
-    buttonLabel = "Virtual Officer";
+    buttonLabel = "Virtual Office";
     isActive = "active text-gold underline";
   } else if (pathname === "/pt-virtual-office") {
-    buttonLabel = "PT + Virtual Officer";
+    buttonLabel = "PT + Virtual Office";
     isActive = "active text-gold underline";
   } else if (pathname === "/cv-virtual-office") {
-    buttonLabel = "CV + Virtual Officer";
+    buttonLabel = "CV + Virtual Office";
     isActive = "active text-gold underline";
   }
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                   isMenuOpen ? "block" : "hidden"
                 } lg:flex lg:items-center lg:static lg:bg-transparent absolute py-5 bg-gold shadow-lg rounded-lg top-full right-4 max-w-[250px] w-full lg:max-w-full`}
               >
-                {/* Virtual Officer Dropdown */}
+                {/* Virtual Office Dropdown */}
                 <div className="hidden lg:block">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
