@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <Navbar/>
-      {/* <Navbar2/> */}
+      {/* <Navbar/> */}
       <section id="jumbotron" className="px-8 lg:px-32 pt-36 w-screen flex">
         <div className="w-screen h-[450px] rounded-xl flex">
           {/* Background Image */}
@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
               </div>
           </div>
-          <div className="lg:hidden w-screen h-[400px] rounded-xl flex">
+          <div className="lg:hidden w-screen h-[430px] rounded-xl flex">
             {/* Background Image */}
             <div className="w-full h-full bg-cover bg-gradient-to-r from-background to-gold rounded-xl" style={{ backgroundImage: `url(${layanan})` }} >
               <div className="flex flex-col">
