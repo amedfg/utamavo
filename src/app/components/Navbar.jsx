@@ -11,7 +11,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -38,7 +37,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50">
+    <nav className="fixed w-full top-0 z-50 bg-background">
       <div className="py-3 px-8 lg:px-32 max-w-full mx-auto flex flex-row justify-between items-center">
         {/* Logo */}
         <div>
