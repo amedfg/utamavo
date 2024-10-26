@@ -183,7 +183,7 @@ export default function Home() {
             {/* Overlay and content */}
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gold to-background opacity-75"></div>
             <div className="absolute inset-0 flex flex-col">
-              <p className="ml-4 mt-10 text-3xl font-bold text-gold">
+              <p className="ml-4 mt-10 text-3xl font-bold text-primary">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
               </p>
               <p className="ml-4 mt-6 pt-6 text-xl font-normal text-primary">
