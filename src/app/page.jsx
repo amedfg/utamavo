@@ -31,17 +31,17 @@ export default function Home() {
 
           {/* Overlay content */}
           <div className="absolute inset-0 flex flex-col justify-start">
-            <div className="mx-6 mt-10 text-5xl font-black text-primary lg:ml-14 lg:mt-24">
+            <div className="mx-6 mt-10 text-5xl font-black text-background lg:ml-14 lg:mt-24">
               Utama Virtual Office
             </div>
-            <div className="mx-6 mt-6 text-xl text-primary lg:ml-14">
+            <div className="mx-6 mt-6 text-xl text-background lg:ml-14">
               Menyediakan kebutuhan Virtual Office anda dengan harga yang
               terjangkau.
             </div>
             <div className="mx-6 pt-8 lg:ml-14">
               <Button
                 asChild
-                className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:bg-primary hover:text-background"
+                className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-background hover:bg-gold hover:text-background"
               >
                 <Link
                   href={
@@ -51,7 +51,7 @@ export default function Home() {
                 >
                   Konsultasi Sekarang
                   <svg
-                    className="h-6 w-6 fill-primary transition-colors duration-300 group-hover:fill-background"
+                    className="h-6 w-6 fill-background transition-colors duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -65,10 +65,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section id="layanan-kami" className="px-8 pt-14 lg:px-32">
-        <h1 className="pb-6 text-4xl font-bold text-secondary">Layanan Kami</h1>
+        <h1 className="pb-6 text-4xl font-bold text-primary">Layanan Kami</h1>
         <CarouselCard />
       </section>
+      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <section id="about" className="px-8 py-14 lg:px-32">
         <div className="flex flex-row items-center">
           <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 lg:inline-flex">
@@ -123,7 +125,7 @@ export default function Home() {
           </div>
           <div className="hidden h-[450px] w-screen rounded-xl lg:flex">
             <div className="item flex flex-col">
-              <p className="mt-32 text-3xl font-bold text-gold">
+              <p className="mt-32 text-3xl font-bold text-primary">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
               </p>
               <p className="pt-6 text-xl font-normal text-primary">
@@ -134,7 +136,7 @@ export default function Home() {
               <div className="pt-6">
                 <Button
                   asChild
-                  className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
+                  className="border-button group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
                 >
                   <Link
                     href={"/about"}
@@ -179,7 +181,7 @@ export default function Home() {
               }}
             />
             {/* Overlay and content */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-background to-gold opacity-75"></div>
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gold to-background opacity-75"></div>
             <div className="absolute inset-0 flex flex-col">
               <p className="ml-4 mt-10 text-3xl font-bold text-gold">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
@@ -216,6 +218,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section id="hubungi-kami" className="flex w-screen px-8 pb-16 lg:px-32">
         <div className="relative flex h-[450px] w-screen overflow-hidden rounded-xl">
           {/* Background Image */}
@@ -234,19 +237,19 @@ export default function Home() {
           />
 
           {/* Overlay content */}
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-gold opacity-75"></div>
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-background to-gold opacity-75"></div>
           <div className="relative z-10">
-            <div className="mx-6 mt-10 text-4xl font-semibold text-gold lg:ml-14 lg:mt-24">
+            <div className="mx-6 mt-10 text-4xl font-semibold text-primary lg:ml-14 lg:mt-24">
               Tertarik dengan Layanan Kami?
             </div>
-            <div className="mx-6 mt-6 text-xl text-background lg:ml-14 lg:text-primary">
+            <div className="mx-6 mt-6 text-xl text-primary lg:ml-14">
               Hubungi kami untuk informasi lebih lanjut terkait harga dan
               layanan yang tersedia di Utama Virtual Office.
             </div>
             <div className="mx-6 pt-8 lg:ml-14">
               <Button
                 asChild
-                className="group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
+                className="border-button group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
               >
                 <Link
                   href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"

@@ -1,12 +1,16 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import JumbotronCV from "./components/Jumbotron";
+import Image from "next/image";
 
 export default function CVVirtualOffice() {
   return (
     <main className="w-full">
       <Navbar />
+
       <JumbotronCV />
+      
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section
         id="keuntungan-virtual-office"
         className="px-8 pb-16 pt-8 lg:px-40"
@@ -16,11 +20,13 @@ export default function CVVirtualOffice() {
         </h1>
         <div className="grid grid-rows-1 gap-x-40 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Tidak Ada Modal Minimal
             </p>
@@ -30,11 +36,13 @@ export default function CVVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Kredibilitas Tinggi
             </p>
@@ -44,11 +52,13 @@ export default function CVVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Pengambilan Keputusan Cepat
             </p>
@@ -59,6 +69,7 @@ export default function CVVirtualOffice() {
           </div>
         </div>
       </section>
+      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

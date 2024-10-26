@@ -14,7 +14,7 @@ export default function Footer() {
             priority={true}
             style={{ width: "145px", height: "55px" }}
           />
-          <p className="mt-4 text-base font-normal text-[rgb(243,239,230)]">
+          <p className="mt-4 text-base font-normal text-primary">
             Utama Virtual Office menyediakan layanan Pendirian Badan Usaha (PT)
             dengan lokasi strategis.
           </p>
@@ -68,7 +68,7 @@ export default function Footer() {
             <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"} className="h-6 w-6">
               <svg
                 role="img"
-                fill="#F3EFE6"
+                fill="#1A1613"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -80,7 +80,7 @@ export default function Footer() {
             <Link href={"#"} className="h-6 w-6">
               <svg
                 role="img"
-                fill="#F3EFE6"
+                fill="#1A1613"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -92,7 +92,7 @@ export default function Footer() {
             <Link href={"#"} className="h-6 w-6">
               <svg
                 role="img"
-                fill="#F3EFE6"
+                fill="#1A1613"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >

@@ -1,39 +1,49 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import JumbotronPajak from "./components/Jumbotron";
+import Image from "next/image";
 
 export default function KonsultanPajak() {
   return (
     <main className="w-full">
       <Navbar />
+
       <JumbotronPajak />
-      <section id="foto-virtual-office" className="px-8 pt-8 lg:px-40">
+
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
+      <section id="foto-virtual-office-3" className="px-8 pt-8 lg:hidden">
         <p className="text-xl font-bold text-primary">
           Kami menawarkan layanan yang membantu bisnis Anda untuk:
         </p>
         <div className="grid grid-rows-1 gap-x-11 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <div className="flex">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
               />
-              Identifikasi Jenis Pajak
-            </p>
+              <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
+                Identifikasi Jenis Pajak
+              </p>
+            </div>
             <p className="ml-6 text-base text-primary">
               Menentukan jenis pajak yang relevan untuk model bisnis Anda.
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <div className="flex">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
               />
-              Konsultasi Pajak
-            </p>
+              <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
+                Konsultasi Pajak
+              </p>
+            </div>
             <p className="ml-6 text-base text-primary">
               Mendampingi Anda dalam penerapan undang-undang perpajakan yang
               berlaku.
@@ -41,37 +51,44 @@ export default function KonsultanPajak() {
           </div>
         </div>
       </section>
-      <section id="foto-virtual-office" className="px-8 pb-16 pt-8 lg:px-40">
-        <h1 className="text-xl font-bold text-primary">Partners Kita : </h1>
+      <section id="foto-virtual-office-2" className="px-8 pb-16 pt-8 lg:px-40">
+        <h1 className="text-xl font-bold text-primary">Partners Kami : </h1>
         <div className="grid grid-rows-1 gap-x-11 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <div className="flex">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
               />
-              SBI (Sinar Bersaudara Investama)
-            </p>
+              <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
+                SBI (Sinar Bersaudara Investama)
+              </p>
+            </div>
             <p className="ml-6 text-base text-primary">
               Registered tax consultant
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <div className="flex">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
               />
-              Utama Karya Bersama
-            </p>
+              <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
+                Utama Karya Bersama
+              </p>
+            </div>
             <p className="ml-6 text-base text-primary">
-              Registered Tax Consultant
+              Registered tax consultant
             </p>
           </div>
         </div>
       </section>
+      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

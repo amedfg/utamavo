@@ -1,25 +1,27 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import JumbotronPT from "./components/Jumbotron";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function PTVirtualOffice() {
   return (
     <main className="w-full">
       <Navbar />
       <JumbotronPT />
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section id="pt-virtual-office-2" className="px-8 pb-16 pt-8 lg:px-40">
         <h1 className="text-xl font-bold text-primary">
           Keuntungan membuat PT melalui UVO antara lain:{" "}
         </h1>
         <div className="grid grid-rows-1 gap-x-40 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Keamanan Harta Pribadi
             </p>
@@ -29,11 +31,13 @@ export default function PTVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Kredibilitas Tinggi
             </p>
@@ -43,11 +47,13 @@ export default function PTVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Pengelolaan Saham yang Fleksibel
             </p>
@@ -56,11 +62,13 @@ export default function PTVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Kemudahan Pendanaan
             </p>
@@ -70,11 +78,13 @@ export default function PTVirtualOffice() {
             </p>
           </div>
           <div>
-            <p className="flex items-center text-xl font-bold text-secondary">
-              <img
-                src="../icon/ic-checklist.svg"
+            <p className="flex items-center text-xl font-bold text-primary">
+              <Image
+                src={"/icon/ic-checklist.svg"}
                 alt="icon-checklist"
-                className="mr-1.5 h-[17px] w-[17px]"
+                width={17}
+                height={17}
+                className="mr-1.5"
               />
               Operasi Jangka Panjang
             </p>
@@ -84,6 +94,7 @@ export default function PTVirtualOffice() {
           </div>
         </div>
       </section>
+      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

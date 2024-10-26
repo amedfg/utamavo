@@ -85,7 +85,7 @@ export default function CarouselCard() {
                   />
                 </CardHeader>
                 <CardContent className="h-auto">
-                  <p className="text-2xl font-semibold text-secondary">
+                  <p className="text-2xl font-semibold text-primary">
                     {card.title}
                   </p>
                   <p className="pt-6 text-base text-primary">
@@ -95,7 +95,7 @@ export default function CarouselCard() {
                   <div className="flex flex-row justify-between pb-2 pt-6 align-bottom">
                     <Button
                       asChild
-                      className="group rounded-md border border-solid bg-transparent p-2.5 text-base text-primary hover:bg-gold hover:text-background"
+                      className="border-button group rounded-md bg-transparent p-2.5 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
                     >
                       <Link
                         href={`${card.pages}`}
@@ -125,7 +125,7 @@ export default function CarouselCard() {
                     </Button>
                     <Button
                       asChild
-                      className="group rounded-md bg-gold p-2.5 text-base text-background hover:border hover:border-solid hover:bg-transparent hover:text-primary"
+                      className="hover:border-button group rounded-md bg-gold p-2.5 text-base text-background hover:border hover:border-solid hover:bg-transparent hover:text-primary"
                     >
                       <Link
                         href={`${card.wa}`}

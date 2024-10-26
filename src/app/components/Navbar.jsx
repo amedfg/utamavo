@@ -91,17 +91,17 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div>
-          <DropdownMenu>
+          <DropdownMenu className="bg-transparent shadow-none">
             <DropdownMenuTrigger asChild>
               <div
                 className={`${
                   isMenuOpen ? "block" : "hidden"
-                } absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-gold py-5 shadow-lg lg:static lg:flex lg:max-w-full lg:items-center lg:bg-transparent`}
+                } absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-gold py-5 lg:static lg:flex lg:max-w-full lg:items-center lg:bg-transparent`}
               >
                 {/* Virtual Office Dropdown */}
                 <div className="hidden lg:block">
                   <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                    <DropdownMenuTrigger className="border-none" asChild>
                       <Button variant="link" className={`${isActive}`}>
                         {buttonLabel}
                         <ChevronDown />
@@ -110,21 +110,21 @@ export default function Navbar() {
                     <DropdownMenuContent className="bg-gold">
                       <DropdownMenuItem>
                         <Link href={"/virtual-office"}>
-                          <Button variant="link" className="text-background">
+                          <Button variant="link" className="text-primary">
                             Virtual Office
                           </Button>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href={"/pt-virtual-office"}>
-                          <Button variant="link" className="text-background">
+                          <Button variant="link" className="text-primary">
                             PT + Virtual Office
                           </Button>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href={"/cv-virtual-office"}>
-                          <Button variant="link" className="text-background">
+                          <Button variant="link" className="text-primary">
                             CV + Virtual Office
                           </Button>
                         </Link>
@@ -138,9 +138,9 @@ export default function Navbar() {
                   <Link href="/virtual-office">
                     <Button
                       variant="link"
-                      className={`text-background lg:text-primary ${
+                      className={`text-primary ${
                         pathname === "/virtual-office"
-                          ? "active text-background underline lg:text-gold"
+                          ? "active text-primary underline"
                           : ""
                       }`}
                     >
@@ -151,9 +151,9 @@ export default function Navbar() {
                   <Link href="/pt-virtual-office">
                     <Button
                       variant="link"
-                      className={`text-background lg:text-primary ${
+                      className={`text-primary ${
                         pathname === "/pt-virtual-office"
-                          ? "active text-background underline lg:text-gold"
+                          ? "active text-primary underline"
                           : ""
                       }`}
                     >
@@ -164,9 +164,9 @@ export default function Navbar() {
                   <Link href="/cv-virtual-office">
                     <Button
                       variant="link"
-                      className={`text-background lg:text-primary ${
+                      className={`text-primary ${
                         pathname === "/cv-virtual-office"
-                          ? "active text-background underline lg:text-gold"
+                          ? "active text-primary underline"
                           : ""
                       }`}
                     >
@@ -177,9 +177,9 @@ export default function Navbar() {
                 <Link href="/pendaftaran-haki">
                   <Button
                     variant="link"
-                    className={`text-background lg:text-primary ${
+                    className={`text-primary lg:text-primary ${
                       pathname === "/pendaftaran-haki"
-                        ? "active text-background underline lg:text-gold"
+                        ? "active text-primary underline lg:text-gold"
                         : ""
                     }`}
                   >
@@ -190,9 +190,9 @@ export default function Navbar() {
                 <Link href="/konsultan-pajak">
                   <Button
                     variant="link"
-                    className={`text-background lg:text-primary ${
+                    className={`text-primary lg:text-primary hover:lg:text-gold ${
                       pathname === "/konsultan-pajak"
-                        ? "active text-background underline lg:text-gold"
+                        ? "active text-primary underline lg:text-gold"
                         : ""
                     }`}
                   >
@@ -203,9 +203,9 @@ export default function Navbar() {
                   <Link href="/about">
                     <Button
                       variant="link"
-                      className={`text-background lg:text-primary ${
+                      className={`text-primary ${
                         pathname === "/about"
-                          ? "active text-background underline lg:text-gold"
+                          ? "active text-primary underline"
                           : ""
                       }`}
                     >
@@ -222,7 +222,7 @@ export default function Navbar() {
         <div className="hidden gap-6 lg:flex lg:flex-row lg:items-center">
           <Button
             asChild
-            className="rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:border hover:bg-background hover:text-primary"
+            className="hover:border-button rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:border-2 hover:bg-background hover:text-primary"
           >
             <Link href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?">
               Hubungi Kami
@@ -230,7 +230,7 @@ export default function Navbar() {
           </Button>
           <Button
             asChild
-            className="rounded-lg border bg-background px-2.5 py-2 text-base text-primary hover:bg-gold hover:text-background"
+            className="border-button rounded-lg bg-background px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
           >
             <Link href="/about">Tentang UVO</Link>
           </Button>

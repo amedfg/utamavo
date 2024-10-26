@@ -8,6 +8,7 @@ export default function VirtualOffice() {
     <main className="w-full">
       <Navbar />
       <Jumbotron />
+      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section id="foto-virtual-office" className="px-8 pb-16 pt-8 lg:hidden">
         <h1 className="text-xl font-bold text-primary">
           Keuntungan yang didapatkan:{" "}
@@ -55,9 +56,8 @@ export default function VirtualOffice() {
           </p>
         </div>
       </section>
-
-      <section id="foto-virtual-office" className="hidden px-32 py-16 lg:block">
-        <h1 className="pb-8 text-4xl font-bold text-secondary">
+      <section id="foto-virtual-office-2" className="hidden px-32 py-16 lg:block">
+        <h1 className="pb-8 text-4xl font-bold text-primary">
           Foto Virtual Office
         </h1>
         <div className="relative flex min-h-[735px] w-full min-w-[1176px] items-center justify-center gap-3">
@@ -169,7 +169,7 @@ export default function VirtualOffice() {
           </div>
         </div>
       </section>
-
+      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

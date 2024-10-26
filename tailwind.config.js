@@ -13,15 +13,15 @@ module.exports = {
   		},
   		colors: {
   			primary: {
-  				DEFAULT: '#F3EFE6',
+  				DEFAULT: '#1A1613',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
   				DEFAULT: '#F5E7A7',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
-  			background: '#1A1613',
-  			foreground: 'hsl(var(--foreground))',
+  			background: '#FFFFFF',
+  			foreground: '#76767D',
   			card: {
   				DEFAULT: 'hsl(var(--foreground))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -45,7 +45,7 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
-  			gold: '#EACF7F',
+  			gold: '#CA9F20',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
