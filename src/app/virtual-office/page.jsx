@@ -7,8 +7,29 @@ export default function VirtualOffice() {
   return (
     <main className="w-full">
       <Navbar />
+      <Image
+        src="/img/ellipse-9.png"
+        width={435}
+        height={836}
+        className="absolute"
+        alt="ellipse-9"
+      />
       <Jumbotron />
-      <div className="half-circle-vertical absolute -mt-[150px]"></div>
+      <Image
+        src="/img/ellipse-8.png"
+        width={347}
+        height={767}
+        className="absolute right-0 -mt-[200px]"
+        alt="ellipse-8"
+      />
+      <Image
+        src="/img/ellipse-10.png"
+        width={385}
+        height={1354}
+        className="absolute hidden lg:flex"
+        alt="ellipse-10"
+        priority
+      />
       <section id="foto-virtual-office" className="px-8 pb-16 pt-8 lg:hidden">
         <h1 className="text-xl font-bold text-primary">
           Keuntungan yang didapatkan:{" "}
@@ -56,7 +77,10 @@ export default function VirtualOffice() {
           </p>
         </div>
       </section>
-      <section id="foto-virtual-office-2" className="hidden px-32 py-16 lg:block">
+      <section
+        id="foto-virtual-office-2"
+        className="hidden px-32 py-16 lg:block"
+      >
         <h1 className="pb-8 text-4xl font-bold text-primary">
           Foto Virtual Office
         </h1>
@@ -169,7 +193,6 @@ export default function VirtualOffice() {
           </div>
         </div>
       </section>
-      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

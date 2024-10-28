@@ -110,21 +110,21 @@ export default function Navbar() {
                     <DropdownMenuContent className="bg-gold">
                       <DropdownMenuItem>
                         <Link href={"/virtual-office"}>
-                          <Button variant="link" className="text-primary">
+                          <Button variant="link" className="text-white">
                             Virtual Office
                           </Button>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href={"/pt-virtual-office"}>
-                          <Button variant="link" className="text-primary">
+                          <Button variant="link" className="text-white">
                             PT + Virtual Office
                           </Button>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
                         <Link href={"/cv-virtual-office"}>
-                          <Button variant="link" className="text-primary">
+                          <Button variant="link" className="text-white">
                             CV + Virtual Office
                           </Button>
                         </Link>
@@ -138,9 +138,9 @@ export default function Navbar() {
                   <Link href="/virtual-office">
                     <Button
                       variant="link"
-                      className={`text-primary ${
+                      className={`text-white ${
                         pathname === "/virtual-office"
-                          ? "active text-primary underline"
+                          ? "active text-white underline"
                           : ""
                       }`}
                     >
@@ -151,9 +151,9 @@ export default function Navbar() {
                   <Link href="/pt-virtual-office">
                     <Button
                       variant="link"
-                      className={`text-primary ${
+                      className={`text-white ${
                         pathname === "/pt-virtual-office"
-                          ? "active text-primary underline"
+                          ? "active text-white underline"
                           : ""
                       }`}
                     >
@@ -164,9 +164,9 @@ export default function Navbar() {
                   <Link href="/cv-virtual-office">
                     <Button
                       variant="link"
-                      className={`text-primary ${
+                      className={`text-white ${
                         pathname === "/cv-virtual-office"
-                          ? "active text-primary underline"
+                          ? "active text-white underline"
                           : ""
                       }`}
                     >
@@ -177,9 +177,9 @@ export default function Navbar() {
                 <Link href="/pendaftaran-haki">
                   <Button
                     variant="link"
-                    className={`text-primary lg:text-primary ${
+                    className={`text-white lg:text-primary hover:lg:text-gold ${
                       pathname === "/pendaftaran-haki"
-                        ? "active text-primary underline lg:text-gold"
+                        ? "active text-white underline lg:text-gold"
                         : ""
                     }`}
                   >
@@ -190,9 +190,9 @@ export default function Navbar() {
                 <Link href="/konsultan-pajak">
                   <Button
                     variant="link"
-                    className={`text-primary lg:text-primary hover:lg:text-gold ${
+                    className={`text-white lg:text-primary hover:lg:text-gold ${
                       pathname === "/konsultan-pajak"
-                        ? "active text-primary underline lg:text-gold"
+                        ? "active text-white underline lg:text-gold"
                         : ""
                     }`}
                   >
@@ -203,9 +203,9 @@ export default function Navbar() {
                   <Link href="/about">
                     <Button
                       variant="link"
-                      className={`text-primary ${
+                      className={`text-white ${
                         pathname === "/about"
-                          ? "active text-primary underline"
+                          ? "active text-white underline"
                           : ""
                       }`}
                     >

@@ -7,10 +7,21 @@ export default function KonsultanPajak() {
   return (
     <main className="w-full">
       <Navbar />
-
+      <Image
+        src="/img/ellipse-9.png"
+        width={435}
+        height={836}
+        className="absolute"
+        alt="ellipse-9"
+      />
+      <Image
+        src="/img/ellipse-8.png"
+        width={347}
+        height={767}
+        className="absolute right-0 mt-[200px]"
+        alt="ellipse-8"
+      />
       <JumbotronPajak />
-
-      <div className="half-circle-vertical absolute -mt-[150px]"></div>
       <section id="foto-virtual-office-3" className="px-8 pt-8 lg:hidden">
         <p className="text-xl font-bold text-primary">
           Kami menawarkan layanan yang membantu bisnis Anda untuk:
@@ -88,7 +99,6 @@ export default function KonsultanPajak() {
           </div>
         </div>
       </section>
-      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

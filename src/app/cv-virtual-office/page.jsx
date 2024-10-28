@@ -7,10 +7,21 @@ export default function CVVirtualOffice() {
   return (
     <main className="w-full">
       <Navbar />
-
+      <Image
+        src="/img/ellipse-9.png"
+        width={435}
+        height={836}
+        className="absolute"
+        alt="ellipse-9"
+      />
       <JumbotronCV />
-      
-      <div className="half-circle-vertical absolute -mt-[150px]"></div>
+      <Image
+        src="/img/ellipse-8.png"
+        width={347}
+        height={767}
+        className="absolute right-0 -mt-[200px]"
+        alt="ellipse-8"
+      />
       <section
         id="keuntungan-virtual-office"
         className="px-8 pb-16 pt-8 lg:px-40"
@@ -69,7 +80,6 @@ export default function CVVirtualOffice() {
           </div>
         </div>
       </section>
-      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );

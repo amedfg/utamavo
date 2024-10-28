@@ -7,8 +7,22 @@ export default function PendaftaranHAKI() {
   return (
     <main className="w-full">
       <Navbar />
+      <Image
+        src="/img/ellipse-9.png"
+        width={435}
+        height={836}
+        className="absolute"
+        alt="ellipse-9"
+      />
+            <Image
+        src="/img/ellipse-8.png"
+        width={347}
+        height={767}
+        className="absolute right-0 mt-[100px]"
+        alt="ellipse-8"
+      />
       <JumbotronHAKI />
-      <div className="half-circle-vertical absolute -mt-[150px]"></div>
+
       <section id="haki-virtual-office" className="px-8 pb-16 pt-8 lg:px-40">
         <h1 className="text-xl font-bold text-primary">
           Layanan kami mencakup:
@@ -62,7 +76,6 @@ export default function PendaftaranHAKI() {
           </div>
         </div>
       </section>
-      <div className="right-half-circle-vertical absolute -mt-[150px]"></div>
       <Footer />
     </main>
   );
