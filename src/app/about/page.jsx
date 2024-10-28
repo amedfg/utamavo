@@ -22,7 +22,7 @@ export default function About() {
       />
       <section className="w-full px-8 pb-28 pt-36 lg:px-32">
         <Image
-          src={"/img/jumbotron-about.jpg"}
+          src={"/img/jumbotron-about-2.jpg"}
           alt="jumbotron-about"
           width={500}
           height={500}
