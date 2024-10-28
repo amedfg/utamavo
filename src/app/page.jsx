@@ -241,7 +241,7 @@ export default function Home() {
       </section>
       <section id="hubungi-kami" className="flex w-full px-8 pb-16 lg:px-32">
         <div className="flex w-full flex-wrap justify-center">
-          <div className="relative flex h-[320px] max-w-[663px] rounded-xl">
+          <div className="relative flex h-[360px] lg:h-[320px] max-w-[663px] rounded-xl">
             {/* Overlay content */}
             <div className="absolute inset-0 bg-gradient-to-r from-background to-gold opacity-75"></div>
             <div className="relative z-10">
