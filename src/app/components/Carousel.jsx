@@ -41,14 +41,14 @@ const cards = [
     pages: "/cv-virtual-office",
     wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20CV%20+%20Virtual%20Office%20Anda?",
   },
-  {
-    title: "Pendaftaran HAKI",
-    img: "pendaftaran-haki.jpg",
-    description:
-      "Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta Anda.",
-    pages: "/pendaftaran-haki",
-    wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Pendaftaran%20HAKI%20Anda?",
-  },
+  // {
+  //   title: "Pendaftaran HAKI",
+  //   img: "pendaftaran-haki.jpg",
+  //   description:
+  //     "Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta Anda.",
+  //   pages: "/pendaftaran-haki",
+  //   wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Pendaftaran%20HAKI%20Anda?",
+  // },
   {
     title: "Konsultan Pajak",
     img: "konsultan-pajak.jpg",

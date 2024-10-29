@@ -174,7 +174,7 @@ export default function Navbar() {
                     </Button>
                   </Link>
                 </div>
-                <Link href="/pendaftaran-haki">
+                {/* <Link href="/pendaftaran-haki">
                   <Button
                     variant="link"
                     className={`text-white lg:text-primary hover:lg:text-gold ${
@@ -185,7 +185,7 @@ export default function Navbar() {
                   >
                     Pendaftaran HAKI
                   </Button>
-                </Link>
+                </Link> */}
 
                 <Link href="/konsultan-pajak">
                   <Button
