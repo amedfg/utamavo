@@ -67,10 +67,10 @@ export default function JumbotronHAKI() {
           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-black to-gold opacity-70"></div>
           {/* Content Overlay */}
           <div className="absolute z-10 flex h-full flex-col rounded-lg p-8">
-            <p className="mt-12 text-3xl font-black text-primary">
+            <p className="mt-12 text-3xl font-black text-background">
               Pendaftaran HAKI/ Merek Dagang
             </p>
-            <p className="py-6 text-lg font-normal text-primary">
+            <p className="py-6 text-lg font-normal text-background">
               Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan
               Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta
               Anda.

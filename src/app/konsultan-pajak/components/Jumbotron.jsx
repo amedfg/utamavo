@@ -97,7 +97,7 @@ export default function JumbotronPajak() {
           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-black to-gold opacity-70"></div>
           {/* Content Overlay */}
           <div className="absolute z-10 flex h-full flex-col p-8">
-            <p className="mt-12 text-3xl font-black text-primary">
+            <p className="mt-12 text-3xl font-black text-background">
               Konsultan Pajak
             </p>
             <p className="py-6 text-lg font-normal text-background">
