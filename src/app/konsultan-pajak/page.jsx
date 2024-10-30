@@ -64,7 +64,7 @@ export default function KonsultanPajak() {
       </section>
       <section id="foto-virtual-office-2" className="px-8 pb-16 pt-8 lg:px-40">
         <h1 className="text-xl font-bold text-primary">Partners Kami : </h1>
-        <div className="grid grid-rows-1 gap-x-11 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
+        <div className="flex gap-x-6 lg:gap-x-20 gap-y-6 pb-8 pt-[23px] lg:grid-cols-2">
           <div>
             <div className="flex">
               <Image
@@ -74,7 +74,7 @@ export default function KonsultanPajak() {
                 height={17}
               />
               <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
-                SBI (Sinar Bersaudara Investama)
+                Utama Karya Bersama
               </p>
             </div>
             <p className="ml-6 text-base text-primary">
@@ -90,7 +90,7 @@ export default function KonsultanPajak() {
                 height={17}
               />
               <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
-                Utama Karya Bersama
+                SBI (Sinar Bersaudara Investama)
               </p>
             </div>
             <p className="ml-6 text-base text-primary">

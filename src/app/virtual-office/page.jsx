@@ -55,7 +55,7 @@ export default function VirtualOffice() {
             />
             Ruang Rapat (Meeting Room)
           </p>
-          <p className="flex items-center text-xl font-normal text-primary">
+          {/* <p className="flex items-center text-xl font-normal text-primary">
             <Image
               src={"/icon/ic-checklist.svg"}
               alt="icon-checklist"
@@ -64,7 +64,7 @@ export default function VirtualOffice() {
               className="mr-1.5"
             />
             PKP (Pengusaha Kena Pajak)
-          </p>
+          </p> */}
           <p className="flex items-center text-xl font-normal text-primary">
             <Image
               src={"/icon/ic-checklist.svg"}

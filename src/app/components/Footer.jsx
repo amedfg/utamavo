@@ -32,11 +32,23 @@ export default function Footer() {
             Virtual Office
           </Link>
           <Link
+            href="/pt-virtual-office"
+            className="mt-2 block text-base font-normal text-primary hover:underline"
+          >
+            PT + Virtual Office
+          </Link>
+          <Link
+            href="/cv-virtual-office"
+            className="mt-2 block text-base font-normal text-primary hover:underline"
+          >
+            CV + Virtual Office
+          </Link>
+          {/* <Link
             href="/pendaftaran-haki"
             className="mt-2 block text-base font-normal text-primary hover:underline"
           >
             Pendaftaran HAKI
-          </Link>
+          </Link> */}
           <Link
             href="/konsultan-pajak"
             className="mt-2 block text-base font-normal text-primary hover:underline"
@@ -65,7 +77,12 @@ export default function Footer() {
           </h3>
           <div className="mt-2 flex gap-2">
             {/* WhatsApp */}
-            <Link href={"https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"} className="h-6 w-6">
+            <Link
+              href={
+                "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
+              }
+              className="h-6 w-6"
+            >
               <svg
                 role="img"
                 fill="#1A1613"

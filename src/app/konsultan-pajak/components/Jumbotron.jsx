@@ -57,9 +57,9 @@ export default function JumbotronPajak() {
         </div>
         <Button
           asChild
-          className="border-button group rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:bg-transparent hover:text-primary"
+          className="border-button group relative rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:bg-transparent hover:text-primary"
         >
-          <Link href={whatsapp} className="text-lg">
+          <Link href={whatsapp} className="absolute text-lg">
             Konsultasi Sekarang{" "}
             <svg
               role="img"

@@ -92,7 +92,7 @@ export default function Home() {
         <CarouselCard />
       </section>
 
-      <section id="about" className="px-8 py-14 lg:px-32">
+      <section id="about" className="px-8 pt-20 pb-14 lg:px-32">
         <div className="flex flex-row items-center">
           <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 lg:inline-flex">
             <div className="relative flex w-[238px] flex-col items-start gap-[11px]">
