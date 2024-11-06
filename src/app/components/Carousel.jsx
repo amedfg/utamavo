@@ -77,7 +77,7 @@ export default function CarouselCard() {
         {cards.map((card, index) => (
           <CarouselItem
             key={index}
-            className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+            className="sm:basis-1/2 xl:basis-1/4"
           >
             <Card className="bg-transparent p-1">
               <CardHeader>

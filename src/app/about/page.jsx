@@ -17,10 +17,13 @@ export default function About() {
         src="/img/ellipse-8.png"
         width={347}
         height={767}
-        className="absolute right-0 mt-[300px] h-1/2 w-1/2 lg:h-full lg:w-full"
+        className="absolute right-0 mt-[300px] h-1/2 w-1/2 xl:h-full xl:w-full"
         alt="ellipse-8"
       />
-      <section id="jumbotron" className="flex w-screen px-8 pt-36 lg:px-32">
+      <section
+        id="jumbotron"
+        className="flex w-screen px-8 pb-16 pt-36 lg:px-32"
+      >
         <div className="relative flex h-[560px] w-screen overflow-hidden rounded-xl md:h-[450px]">
           {/* Background Image */}
           <Image
@@ -73,7 +76,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="hidden flex-col lg:flex">
+            <div className="hidden flex-col xl:flex">
               <Image
                 src={"/img/logo-about.png"}
                 width={380}

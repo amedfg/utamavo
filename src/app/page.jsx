@@ -87,14 +87,14 @@ export default function Home() {
         alt="ellipse-10"
         priority
       />
-      <section id="layanan-kami" className="px-8 pt-14 lg:px-32">
+      <section id="layanan-kami" className="px-8 pt-14 pb-16 xl:pb-0 lg:px-32">
         <h1 className="pb-6 text-4xl font-bold text-primary">Layanan Kami</h1>
         <CarouselCard />
       </section>
 
       <section id="about" className="px-8 pt-20 pb-14 lg:px-32">
-        <div className="flex flex-row items-center">
-          <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 lg:inline-flex">
+        <div className="flex flex-row items-center justify-between gap-3">
+          <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 xl:inline-flex">
             <div className="relative flex w-[238px] flex-col items-start gap-[11px]">
               <Image
                 src={"/img/virtual-office/DSCF32611.jpg"}
@@ -144,7 +144,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="hidden h-[450px] w-screen rounded-xl lg:flex">
+          <div className="hidden h-[450px] w-screen rounded-xl xl:flex">
             <div className="item flex flex-col">
               <p className="mt-32 text-3xl font-bold text-primary">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
@@ -188,7 +188,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative flex h-[450px] w-screen overflow-hidden rounded-xl lg:hidden">
+          <div className="relative flex h-[450px] w-screen overflow-hidden rounded-xl xl:hidden">
             {/* Background Image */}
             <Image
               src={layanan}
@@ -203,7 +203,7 @@ export default function Home() {
             />
             {/* Overlay and content */}
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gold to-background opacity-75"></div>
-            <div className="absolute inset-0 flex flex-col">
+            <div className="absolute inset-0 flex flex-col md:mt-10">
               <p className="ml-4 mt-10 text-3xl font-bold text-primary">
                 UVO Selalu Memberikan Pelayanan yang Terbaik
               </p>
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
       <section id="hubungi-kami" className="flex w-full px-8 pb-16 lg:px-32">
         <div className="flex w-full flex-wrap justify-center">
-          <div className="relative flex h-[360px] lg:h-[320px] max-w-[663px] rounded-xl">
+          <div className="relative flex h-[360px] lg:h-[320px] w-full 2xl:max-w-[663px] rounded-xl">
             {/* Overlay content */}
             <div className="absolute inset-0 bg-gradient-to-r from-background to-gold opacity-75"></div>
             <div className="relative z-10">
@@ -277,7 +277,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative hidden max-w-[513px] lg:flex">
+          <div className="relative hidden max-w-[513px] 2xl:flex">
             {/* Background Image */}
             <Image
               src={"/img/hubungi-kami.jpg"}

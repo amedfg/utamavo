@@ -26,11 +26,11 @@ export default function VirtualOffice() {
         src="/img/ellipse-10.png"
         width={385}
         height={1354}
-        className="absolute hidden lg:flex"
+        className="absolute hidden xl:flex"
         alt="ellipse-10"
         priority
       />
-      <section id="foto-virtual-office" className="px-8 pb-16 pt-8 lg:hidden">
+      <section id="foto-virtual-office" className="px-8 lg:px-32 pb-16 pt-8 xl:hidden">
         <h1 className="text-xl font-bold text-primary">
           Keuntungan yang didapatkan:{" "}
         </h1>
@@ -79,7 +79,7 @@ export default function VirtualOffice() {
       </section>
       <section
         id="foto-virtual-office-2"
-        className="hidden px-32 py-16 lg:block"
+        className="hidden px-32 py-16 xl:block"
       >
         <h1 className="pb-8 text-4xl font-bold text-primary">
           Foto Virtual Office
