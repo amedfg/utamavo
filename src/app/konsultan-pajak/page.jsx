@@ -74,7 +74,7 @@ export default function KonsultanPajak() {
                 height={17}
               />
               <p className="ml-1.5 flex items-center text-xl font-bold text-primary">
-                Utama Karya Bersama
+                Utama Karya Bersinar
               </p>
             </div>
             <p className="ml-6 text-base text-primary">
