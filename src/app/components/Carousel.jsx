@@ -26,7 +26,7 @@ const cards = [
       "Alamat bisnis yang terletak di gedung komersial premium dengan fasilitas untuk meningkatkan profesionalitas bisnis Anda.",
     alt: "virtual-office",
     pages: "/virtual-office",
-    wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?",
+    wa: "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?",
   },
   {
     title: "PT + Virtual Office",
@@ -35,7 +35,7 @@ const cards = [
       "UVO menyediakan layanan lengkap untuk mendirikan Perseroan Terbatas (PT) dan penyewaan Virtual Office yang terintegrasi.",
     alt: "pt-virtual-office",
     pages: "/pt-virtual-office",
-    wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20PT%20+%20Virtual%20Office%20Anda?",
+    wa: "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20PT%20+%20Virtual%20Office%20Anda?",
   },
   {
     title: "CV + Virtual Office",
@@ -44,7 +44,7 @@ const cards = [
       "UVO melayani pembuatan Commanditaire Vennootschap (CV) dan Virtual Office, solusi tepat bagi perusahaan yang ingin memulai bisnis.",
     alt: "cv-virtual-office",
     pages: "/cv-virtual-office",
-    wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20CV%20+%20Virtual%20Office%20Anda?",
+    wa: "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20CV%20+%20Virtual%20Office%20Anda?",
   },
   // {
   //   title: "Pendaftaran HAKI",
@@ -52,7 +52,7 @@ const cards = [
   //   description:
   //     "Utama Virtual Office menawarkan layanan pendaftaran Hak Kekayaan Intelektual (HAKI) untuk melindungi merek dagang dan hak cipta Anda.",
   //   pages: "/pendaftaran-haki",
-  //   wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Pendaftaran%20HAKI%20Anda?",
+  //   wa: "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Pendaftaran%20HAKI%20Anda?",
   // },
   {
     title: "Konsultan Pajak",
@@ -61,7 +61,7 @@ const cards = [
       "Tim konsultan pajak Utama Virtual Office siap membantu perusahaan Anda memahami regulasi perpajakan di Indonesia.",
     alt: "konsultan-pajak",
     pages: "/konsultan-pajak",
-    wa: "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Konsultan%20Pajak%20Anda?",
+    wa: "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Konsultan%20Pajak%20Anda?",
   },
 ];
 
@@ -75,10 +75,7 @@ export default function CarouselCard() {
     >
       <CarouselContent>
         {cards.map((card, index) => (
-          <CarouselItem
-            key={index}
-            className="sm:basis-1/2 xl:basis-1/4"
-          >
+          <CarouselItem key={index} className="sm:basis-1/2 xl:basis-1/4">
             <Card className="bg-transparent p-1">
               <CardHeader>
                 <Image
@@ -137,6 +134,8 @@ export default function CarouselCard() {
                   <Link
                     href={`${card.wa}`}
                     className="flex items-center text-lg group-hover:text-primary"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     Pesan Sekarang
                     <svg

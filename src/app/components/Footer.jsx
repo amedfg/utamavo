@@ -79,9 +79,11 @@ export default function Footer() {
             {/* WhatsApp */}
             <Link
               href={
-                "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
+                "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
               }
               className="h-6 w-6"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <svg
                 role="img"
@@ -94,7 +96,14 @@ export default function Footer() {
               </svg>
             </Link>
             {/* Gmail */}
-            <Link href={"#"} className="h-6 w-6">
+            <Link
+              href={
+                "https://mail.google.com/mail/?view=cm&fs=1&to=adminuvo@utamavo.com"
+              }
+              className="h-6 w-6"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <svg
                 role="img"
                 fill="#1A1613"

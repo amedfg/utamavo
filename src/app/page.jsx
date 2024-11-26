@@ -52,9 +52,11 @@ export default function Home() {
               >
                 <Link
                   href={
-                    "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
+                    "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
                   }
                   className="flex items-center text-lg group-hover:text-background"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Konsultasi Sekarang
                   <svg
@@ -87,12 +89,12 @@ export default function Home() {
         alt="ellipse-10"
         priority
       />
-      <section id="layanan-kami" className="px-8 pt-14 pb-16 xl:pb-0 lg:px-32">
+      <section id="layanan-kami" className="px-8 pb-16 pt-14 lg:px-32 xl:pb-0">
         <h1 className="pb-6 text-4xl font-bold text-primary">Layanan Kami</h1>
         <CarouselCard />
       </section>
 
-      <section id="about" className="px-8 pt-20 pb-14 lg:px-32">
+      <section id="about" className="px-8 pb-14 pt-20 lg:px-32">
         <div className="flex flex-row items-center justify-between gap-3">
           <div className="relative hidden min-h-[429px] w-full min-w-[485px] items-center gap-2 xl:inline-flex">
             <div className="relative flex w-[238px] flex-col items-start gap-[11px]">
@@ -241,7 +243,7 @@ export default function Home() {
       </section>
       <section id="hubungi-kami" className="flex w-full px-8 pb-16 lg:px-32">
         <div className="flex w-full flex-wrap justify-center">
-          <div className="relative flex h-[360px] lg:h-[320px] w-full 2xl:max-w-[663px] rounded-xl">
+          <div className="relative flex h-[360px] w-full rounded-xl lg:h-[320px] 2xl:max-w-[663px]">
             {/* Overlay content */}
             <div className="absolute inset-0 bg-gradient-to-r from-background to-gold opacity-75"></div>
             <div className="relative z-10">
@@ -258,8 +260,10 @@ export default function Home() {
                   className="border-button group rounded-lg border-2 bg-transparent px-2.5 py-2 text-base text-primary hover:border-none hover:bg-gold hover:text-background"
                 >
                   <Link
-                    href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
+                    href="https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
                     className="flex items-center text-lg group-hover:text-background"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     Hubungi Kami
                     <svg

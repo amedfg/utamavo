@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 
 export default function Header() {
   const whatsapp =
-    "https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?";
+    "https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Virtual%20Office%20Anda?";
 
   return (
     <section
@@ -66,7 +66,12 @@ export default function Header() {
           asChild
           className="border-button group relative rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:bg-transparent hover:text-primary"
         >
-          <Link href={whatsapp} className="absolute text-lg">
+          <Link
+            href={whatsapp}
+            className="absolute text-lg"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Konsultasi Sekarang{" "}
             <svg
               role="img"
@@ -117,7 +122,12 @@ export default function Header() {
               asChild
               className="ml-8 rounded-lg bg-gold px-2.5 py-2 text-base text-background"
             >
-              <Link href={whatsapp} className="text-lg">
+              <Link
+                href={whatsapp}
+                className="text-lg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Konsultasi Sekarang{" "}
                 <Image
                   src="/icon/ic-wa.svg"

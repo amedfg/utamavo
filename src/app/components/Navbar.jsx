@@ -224,7 +224,11 @@ export default function Navbar() {
             asChild
             className="hover:border-button rounded-lg bg-gold px-2.5 py-2 text-base text-background hover:border-2 hover:bg-background hover:text-primary"
           >
-            <Link href="https://wa.me/6281911506190?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?">
+            <Link
+              href="https://wa.me/6285693388888?text=Halo,%20Saya%20ingin%20bertanya%20tentang%20jasa%20Anda?"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               Hubungi Kami
             </Link>
           </Button>
